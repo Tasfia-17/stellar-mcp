@@ -162,44 +162,43 @@ server.tool(
   "List available x402-protected services on Stellar that the agent can pay for. Shows service name, description, price, and endpoint URL.",
   {},
   async () => {
-    // Catalog of known x402 services on Stellar testnet (xlm402.com)
-    // In production this would query a Bazaar-compatible discovery endpoint
+    // Catalog sourced from https://xlm402.com/api/catalog
     const services = [
       {
         name: "Crypto Market Data",
-        description: "Real-time prices for BTC, ETH, XLM and 100+ assets",
+        description: "Real-time BTC, ETH, XLM quotes from Binance, Kraken, Coinbase",
         price: "$0.01 USDC",
-        url: "https://xlm402.com/api/crypto",
+        url: "https://xlm402.com/testnet/markets/crypto/quote?symbol=BTC-USD",
       },
       {
-        name: "News Aggregation",
-        description: "Latest crypto and tech news headlines",
+        name: "News — Blockchain",
+        description: "Latest blockchain and crypto news from multiple RSS feeds",
         price: "$0.01 USDC",
-        url: "https://xlm402.com/api/news",
+        url: "https://xlm402.com/testnet/news/blockchain",
+      },
+      {
+        name: "News — AI",
+        description: "Latest AI stories from multiple vetted RSS feeds",
+        price: "$0.01 USDC",
+        url: "https://xlm402.com/testnet/news/ai",
       },
       {
         name: "Weather Intelligence",
-        description: "Current weather data for any city",
+        description: "Current weather conditions for any latitude and longitude",
         price: "$0.01 USDC",
-        url: "https://xlm402.com/api/weather",
-      },
-      {
-        name: "AI Inference",
-        description: "GPT-powered text generation and analysis",
-        price: "$0.05 USDC",
-        url: "https://xlm402.com/api/ai",
+        url: "https://xlm402.com/testnet/weather/current?latitude=23.8&longitude=90.4",
       },
       {
         name: "Web Extraction",
-        description: "Extract structured data from any webpage",
+        description: "Extract structured data from any public webpage",
         price: "$0.03 USDC",
-        url: "https://xlm402.com/api/extract",
+        url: "https://xlm402.com/testnet/scrape/extract",
       },
       {
-        name: "Image Generation",
-        description: "AI-generated images from text prompts",
-        price: "$0.10 USDC",
-        url: "https://xlm402.com/api/image",
+        name: "Data Collection",
+        description: "Bounded same-origin crawl from a seed URL",
+        price: "$0.08 USDC",
+        url: "https://xlm402.com/testnet/collect/run",
       },
     ];
 
