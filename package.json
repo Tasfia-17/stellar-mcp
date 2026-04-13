@@ -1,0 +1,28 @@
+{
+  "name": "x402-stellar-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that lets AI agents autonomously pay for x402-protected APIs on Stellar",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "x402-stellar-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@x402/core": "^2.9.0",
+    "@x402/fetch": "^2.9.0",
+    "@x402/stellar": "^2.9.0",
+    "@stellar/stellar-sdk": "^15.0.1",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.12.7"
+  }
+}
