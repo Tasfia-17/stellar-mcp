@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#0d1b2a"/>
+    </linearGradient>
+    <linearGradient id="topFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7b61ff"/>
+      <stop offset="100%" style="stop-color:#4f8ef7"/>
+    </linearGradient>
+    <linearGradient id="leftFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a2fa0"/>
+      <stop offset="100%" style="stop-color:#1a3a7a"/>
+    </linearGradient>
+    <linearGradient id="rightFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5b4bd4"/>
+      <stop offset="100%" style="stop-color:#2d5fb5"/>
+    </linearGradient>
+    <linearGradient id="innerCube" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#0099ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg)" rx="24"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.06" stroke="#7b61ff" stroke-width="1">
+    <line x1="0" y1="80" x2="400" y2="80"/>
+    <line x1="0" y1="160" x2="400" y2="160"/>
+    <line x1="0" y1="240" x2="400" y2="240"/>
+    <line x1="0" y1="320" x2="400" y2="320"/>
+    <line x1="80" y1="0" x2="80" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="400"/>
+    <line x1="240" y1="0" x2="240" y2="400"/>
+    <line x1="320" y1="0" x2="320" y2="400"/>
+  </g>
+
+  <!-- Outer glow ring -->
+  <circle cx="200" cy="185" r="115" fill="none" stroke="#7b61ff" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="185" r="130" fill="none" stroke="#4f8ef7" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- 3D Cube - outer -->
+  <!-- Top face -->
+  <polygon points="200,75 295,125 200,175 105,125" fill="url(#topFace)" opacity="0.95" filter="url(#glow)"/>
+  <!-- Left face -->
+  <polygon points="105,125 200,175 200,270 105,220" fill="url(#leftFace)" opacity="0.95"/>
+  <!-- Right face -->
+  <polygon points="295,125 200,175 200,270 295,220" fill="url(#rightFace)" opacity="0.95"/>
+
+  <!-- Cube edges highlight -->
+  <polyline points="200,75 295,125 295,220 200,270 105,220 105,125 200,75" fill="none" stroke="#7b61ff" stroke-width="1.5" opacity="0.6"/>
+  <line x1="200" y1="175" x2="200" y2="270" stroke="#7b61ff" stroke-width="1.5" opacity="0.6"/>
+  <line x1="200" y1="175" x2="105" y2="125" stroke="#7b61ff" stroke-width="1.5" opacity="0.6"/>
+  <line x1="200" y1="175" x2="295" y2="125" stroke="#7b61ff" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Inner floating cube (Stellar star shape) -->
+  <g filter="url(#softglow)">
+    <polygon points="200,130 222,158 200,186 178,158" fill="url(#innerCube)" opacity="0.9"/>
+    <polygon points="200,130 222,158 200,158 178,158" fill="#00d4aa" opacity="0.5"/>
+  </g>
+
+  <!-- Stellar-style star in center -->
+  <g filter="url(#glow)" transform="translate(200,158)">
+    <polygon points="0,-18 4,-6 16,-6 7,2 11,14 0,7 -11,14 -7,2 -16,-6 -4,-6" fill="#00d4aa" opacity="0.95"/>
+  </g>
+
+  <!-- Orbiting dots (payment flow) -->
+  <circle cx="200" cy="75" r="4" fill="#00d4aa" filter="url(#glow)"/>
+  <circle cx="295" cy="125" r="3" fill="#4f8ef7" filter="url(#glow)"/>
+  <circle cx="295" cy="220" r="3" fill="#4f8ef7" filter="url(#glow)"/>
+  <circle cx="200" cy="270" r="4" fill="#00d4aa" filter="url(#glow)"/>
+  <circle cx="105" cy="220" r="3" fill="#7b61ff" filter="url(#glow)"/>
+  <circle cx="105" cy="125" r="3" fill="#7b61ff" filter="url(#glow)"/>
+
+  <!-- Text: x402 -->
+  <text x="200" y="318" font-family="'Courier New', monospace" font-size="28" font-weight="700"
+        fill="#ffffff" text-anchor="middle" letter-spacing="4" filter="url(#glow)">x402</text>
+
+  <!-- Text: STELLAR MCP -->
+  <text x="200" y="345" font-family="'Courier New', monospace" font-size="13" font-weight="400"
+        fill="#7b61ff" text-anchor="middle" letter-spacing="6" opacity="0.9">STELLAR MCP</text>
+
+  <!-- Bottom tagline -->
+  <text x="200" y="372" font-family="'Courier New', monospace" font-size="9"
+        fill="#4f8ef7" text-anchor="middle" letter-spacing="2" opacity="0.6">AGENTS THAT PAY</text>
+</svg>
