@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#07090f"/>
+      <stop offset="100%" style="stop-color:#0d1220"/>
+    </linearGradient>
+    <linearGradient id="ethGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a1a40"/>
+      <stop offset="100%" style="stop-color:#1a0a28"/>
+    </linearGradient>
+    <linearGradient id="stellarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003328"/>
+      <stop offset="100%" style="stop-color:#001a14"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="420" fill="url(#bg)" rx="16"/>
+  <g opacity="0.04" stroke="#7b61ff" stroke-width="1">
+    <line x1="0" y1="70" x2="900" y2="70"/><line x1="0" y1="140" x2="900" y2="140"/>
+    <line x1="0" y1="210" x2="900" y2="210"/><line x1="0" y1="280" x2="900" y2="280"/>
+    <line x1="0" y1="350" x2="900" y2="350"/>
+    <line x1="180" y1="0" x2="180" y2="420"/><line x1="360" y1="0" x2="360" y2="420"/>
+    <line x1="540" y1="0" x2="540" y2="420"/><line x1="720" y1="0" x2="720" y2="420"/>
+  </g>
+
+  <text x="450" y="36" font-family="'Courier New', monospace" font-size="14" font-weight="700"
+        fill="#ffffff" text-anchor="middle" letter-spacing="4" filter="url(#glow)">WHY STELLAR — COMPARISON</text>
+  <line x1="200" y1="44" x2="700" y2="44" stroke="#7b61ff" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Column headers -->
+  <text x="200" y="68" font-family="'Courier New', monospace" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="2">METRIC</text>
+  <text x="430" y="68" font-family="'Courier New', monospace" font-size="10" fill="#a78bfa" text-anchor="middle" letter-spacing="2">ETHEREUM / BASE</text>
+  <text x="680" y="68" font-family="'Courier New', monospace" font-size="10" fill="#00d4aa" text-anchor="middle" letter-spacing="2">STELLAR</text>
+  <line x1="40" y1="74" x2="860" y2="74" stroke="#4f8ef7" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Row data -->
+  <!-- Row 1: Tx Fee -->
+  <rect x="40" y="82" width="820" height="52" rx="4" fill="#0a0f1a" opacity="0.5"/>
+  <!-- 3D left edge -->
+  <rect x="40" y="82" width="4" height="52" rx="2" fill="#4f8ef7" opacity="0.3"/>
+  <text x="200" y="112" font-family="'Courier New', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">Transaction Fee</text>
+
+  <!-- Ethereum bar -->
+  <rect x="310" y="92" width="240" height="32" rx="4" fill="url(#ethGrad)" stroke="#a78bfa" stroke-width="1"/>
+  <rect x="310" y="92" width="240" height="32" rx="4" fill="#a78bfa" opacity="0.08"/>
+  <text x="430" y="112" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#c4b5fd" text-anchor="middle">$0.001 to $2.00+</text>
+
+  <!-- Stellar bar -->
+  <rect x="560" y="92" width="240" height="32" rx="4" fill="url(#stellarGrad)" stroke="#00d4aa" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="560" y="92" width="240" height="32" rx="4" fill="#00d4aa" opacity="0.1"/>
+  <text x="680" y="112" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#00d4aa" text-anchor="middle" filter="url(#glow)">$0.00001</text>
+
+  <!-- Row 2: Settlement -->
+  <rect x="40" y="142" width="820" height="52" rx="4" fill="#080d18" opacity="0.5"/>
+  <rect x="40" y="142" width="4" height="52" rx="2" fill="#4f8ef7" opacity="0.3"/>
+  <text x="200" y="172" font-family="'Courier New', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">Settlement Time</text>
+
+  <rect x="310" y="152" width="240" height="32" rx="4" fill="url(#ethGrad)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="430" y="172" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#c4b5fd" text-anchor="middle">Variable (gas wars)</text>
+
+  <rect x="560" y="152" width="240" height="32" rx="4" fill="url(#stellarGrad)" stroke="#00d4aa" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="560" y="152" width="240" height="32" rx="4" fill="#00d4aa" opacity="0.1"/>
+  <text x="680" y="172" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#00d4aa" text-anchor="middle" filter="url(#glow)">Under 5 seconds</text>
+
+  <!-- Row 3: USDC -->
+  <rect x="40" y="202" width="820" height="52" rx="4" fill="#0a0f1a" opacity="0.5"/>
+  <rect x="40" y="202" width="4" height="52" rx="2" fill="#4f8ef7" opacity="0.3"/>
+  <text x="200" y="232" font-family="'Courier New', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">USDC</text>
+
+  <rect x="310" y="212" width="240" height="32" rx="4" fill="url(#ethGrad)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="430" y="232" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#c4b5fd" text-anchor="middle">Bridged (wrapped)</text>
+
+  <rect x="560" y="212" width="240" height="32" rx="4" fill="url(#stellarGrad)" stroke="#00d4aa" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="560" y="212" width="240" height="32" rx="4" fill="#00d4aa" opacity="0.1"/>
+  <text x="680" y="232" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#00d4aa" text-anchor="middle" filter="url(#glow)">Native (Circle)</text>
+
+  <!-- Row 4: Uptime -->
+  <rect x="40" y="262" width="820" height="52" rx="4" fill="#080d18" opacity="0.5"/>
+  <rect x="40" y="262" width="4" height="52" rx="2" fill="#4f8ef7" opacity="0.3"/>
+  <text x="200" y="292" font-family="'Courier New', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">Network Uptime</text>
+
+  <rect x="310" y="272" width="240" height="32" rx="4" fill="url(#ethGrad)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="430" y="292" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#c4b5fd" text-anchor="middle">99.9%</text>
+
+  <rect x="560" y="272" width="240" height="32" rx="4" fill="url(#stellarGrad)" stroke="#00d4aa" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="560" y="272" width="240" height="32" rx="4" fill="#00d4aa" opacity="0.1"/>
+  <text x="680" y="292" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#00d4aa" text-anchor="middle" filter="url(#glow)">99.99%</text>
+
+  <!-- Row 5: Micropayment viability -->
+  <rect x="40" y="322" width="820" height="52" rx="4" fill="#0a0f1a" opacity="0.5"/>
+  <rect x="40" y="322" width="4" height="52" rx="2" fill="#4f8ef7" opacity="0.3"/>
+  <text x="200" y="348" font-family="'Courier New', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">$0.01 payment</text>
+  <text x="200" y="362" font-family="'Courier New', monospace" font-size="9" fill="#64748b" text-anchor="middle">economically viable?</text>
+
+  <rect x="310" y="332" width="240" height="32" rx="4" fill="#2a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="430" y="352" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#f87171" text-anchor="middle">No — gas exceeds payment</text>
+
+  <rect x="560" y="332" width="240" height="32" rx="4" fill="url(#stellarGrad)" stroke="#00d4aa" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="560" y="332" width="240" height="32" rx="4" fill="#00d4aa" opacity="0.1"/>
+  <text x="680" y="352" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#00d4aa" text-anchor="middle" filter="url(#glow)">Yes — fee is $0.00001</text>
+
+  <!-- Winner badge -->
+  <rect x="800" y="82" width="55" height="292" rx="6" fill="#001a14" stroke="#00d4aa" stroke-width="1" opacity="0.8"/>
+  <text x="827" y="240" font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#00d4aa" text-anchor="middle" transform="rotate(-90,827,240)" letter-spacing="3">WINNER FOR AGENTS</text>
+</svg>

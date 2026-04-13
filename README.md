@@ -34,6 +34,14 @@ This MCP server brings that capability to Claude Desktop, Kiro, and any MCP-comp
 
 ---
 
+## Stack Layers
+
+<div align="center">
+  <img src="assets/stack.svg" width="100%" alt="x402 Stellar MCP Stack Layers"/>
+</div>
+
+---
+
 ## How It Works
 
 ```
@@ -66,14 +74,19 @@ Agent synthesizes and responds
 
 ---
 
+## Tool Interaction Flow
+
+<div align="center">
+  <img src="assets/tool-flow.svg" width="100%" alt="Tool Interaction Flow"/>
+</div>
+
+---
+
 ## Why Stellar
 
-| | Ethereum / Base | Stellar |
-|---|---|---|
-| Transaction fee | $0.001 to $2 (volatile gas) | $0.00001 (fixed) |
-| Settlement time | Variable | Under 5 seconds |
-| USDC | Bridged | Native (Circle) |
-| Network uptime | 99.9% | 99.99% |
+<div align="center">
+  <img src="assets/comparison.svg" width="100%" alt="Stellar vs Ethereum Comparison"/>
+</div>
 
 A $0.01 micropayment on Ethereum costs more in gas than the payment itself. On Stellar, the economics work at any scale. This is not a generic chain swap. Stellar is the only chain where sub-cent agent payments are economically viable today.
 

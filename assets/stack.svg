@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="900" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#07090f"/>
+      <stop offset="100%" style="stop-color:#0d1220"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="360" fill="url(#bg)" rx="16"/>
+  <g opacity="0.04" stroke="#7b61ff" stroke-width="1">
+    <line x1="0" y1="72" x2="900" y2="72"/><line x1="0" y1="144" x2="900" y2="144"/>
+    <line x1="0" y1="216" x2="900" y2="216"/><line x1="0" y1="288" x2="900" y2="288"/>
+    <line x1="150" y1="0" x2="150" y2="360"/><line x1="300" y1="0" x2="300" y2="360"/>
+    <line x1="450" y1="0" x2="450" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+  </g>
+
+  <text x="450" y="36" font-family="'Courier New', monospace" font-size="14" font-weight="700"
+        fill="#ffffff" text-anchor="middle" letter-spacing="4" filter="url(#glow)">STACK LAYERS</text>
+  <line x1="200" y1="44" x2="700" y2="44" stroke="#7b61ff" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Layer 5 (top): User / Agent -->
+  <polygon points="100,58 800,58 810,68 810,108 110,108 100,98" fill="#0a0515" opacity="0.5"/>
+  <rect x="100" y="48" width="700" height="50" rx="8" fill="#1a0a30" stroke="#7b61ff" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="100" y="48" width="700" height="50" rx="8" fill="#7b61ff" opacity="0.06"/>
+  <text x="450" y="78" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#a78bfa" text-anchor="middle" letter-spacing="3">LAYER 5 — AI AGENT (Claude Desktop / Kiro)</text>
+  <text x="450" y="92" font-family="'Courier New', monospace" font-size="8" fill="#7b61ff" text-anchor="middle" opacity="0.7">Natural language prompt — no payment knowledge required</text>
+
+  <!-- Layer 4: MCP Protocol -->
+  <polygon points="100,118 800,118 810,128 810,168 110,168 100,158" fill="#050a14" opacity="0.5"/>
+  <rect x="100" y="108" width="700" height="50" rx="8" fill="#0a1828" stroke="#4f8ef7" stroke-width="1.5"/>
+  <rect x="100" y="108" width="700" height="50" rx="8" fill="#4f8ef7" opacity="0.06"/>
+  <text x="450" y="138" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#7dd3fc" text-anchor="middle" letter-spacing="3">LAYER 4 — MCP PROTOCOL (stdio transport)</text>
+  <text x="450" y="152" font-family="'Courier New', monospace" font-size="8" fill="#4f8ef7" text-anchor="middle" opacity="0.7">Tool calls over JSON-RPC — discover, probe, fetch, balance</text>
+
+  <!-- Layer 3: x402 MCP Server (this project) -->
+  <polygon points="100,178 800,178 810,188 810,228 110,228 100,218" fill="#001a10" opacity="0.5"/>
+  <rect x="100" y="168" width="700" height="50" rx="8" fill="#001a14" stroke="#00d4aa" stroke-width="2" filter="url(#softglow)"/>
+  <rect x="100" y="168" width="700" height="50" rx="8" fill="#00d4aa" opacity="0.08"/>
+  <text x="380" y="198" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#00d4aa" text-anchor="middle" letter-spacing="3" filter="url(#glow)">LAYER 3 — x402 STELLAR MCP SERVER</text>
+  <rect x="620" y="175" width="160" height="22" rx="4" fill="#00d4aa" opacity="0.2" stroke="#00d4aa" stroke-width="0.8"/>
+  <text x="700" y="190" font-family="'Courier New', monospace" font-size="8" fill="#00d4aa" text-anchor="middle" font-weight="700">THIS PROJECT</text>
+  <text x="450" y="212" font-family="'Courier New', monospace" font-size="8" fill="#6ee7b7" text-anchor="middle" opacity="0.7">@x402/fetch + @x402/stellar — automatic 402 detection and payment signing</text>
+
+  <!-- Layer 2: x402 Protocol + Facilitator -->
+  <polygon points="100,238 800,238 810,248 810,288 110,288 100,278" fill="#050a14" opacity="0.5"/>
+  <rect x="100" y="228" width="700" height="50" rx="8" fill="#0a1828" stroke="#4f8ef7" stroke-width="1.5"/>
+  <rect x="100" y="228" width="700" height="50" rx="8" fill="#4f8ef7" opacity="0.06"/>
+  <text x="450" y="258" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#7dd3fc" text-anchor="middle" letter-spacing="3">LAYER 2 — x402 PROTOCOL + OPENZEPPELIN FACILITATOR</text>
+  <text x="450" y="272" font-family="'Courier New', monospace" font-size="8" fill="#4f8ef7" text-anchor="middle" opacity="0.7">HTTP 402 negotiation — payment verification — on-chain settlement trigger</text>
+
+  <!-- Layer 1: Stellar Network -->
+  <polygon points="100,298 800,298 810,308 810,348 110,348 100,338" fill="#001a10" opacity="0.5"/>
+  <rect x="100" y="288" width="700" height="50" rx="8" fill="#001a14" stroke="#00d4aa" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="100" y="288" width="700" height="50" rx="8" fill="#00d4aa" opacity="0.06"/>
+  <text x="450" y="318" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#00d4aa" text-anchor="middle" letter-spacing="3">LAYER 1 — STELLAR NETWORK (Soroban + USDC)</text>
+  <text x="450" y="332" font-family="'Courier New', monospace" font-size="8" fill="#6ee7b7" text-anchor="middle" opacity="0.7">Final settlement — immutable transaction record — verifiable on stellar.expert</text>
+
+  <!-- Left side depth lines connecting layers -->
+  <line x1="100" y1="98" x2="100" y2="108" stroke="#7b61ff" stroke-width="1" opacity="0.4"/>
+  <line x1="100" y1="158" x2="100" y2="168" stroke="#4f8ef7" stroke-width="1" opacity="0.4"/>
+  <line x1="100" y1="218" x2="100" y2="228" stroke="#00d4aa" stroke-width="1" opacity="0.4"/>
+  <line x1="100" y1="278" x2="100" y2="288" stroke="#4f8ef7" stroke-width="1" opacity="0.4"/>
+</svg>
